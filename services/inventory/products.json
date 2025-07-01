@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Dom Casmurro",
+    "author": "Machado de Assis",
+    "quantity": 12,
+    "price": 34.90,
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dom_Casmurro.jpg/330px-Dom_Casmurro.jpg"
+  },
+  {
+    "id": 2,
+    "name": "O Pequeno Príncipe",
+    "author": "Antoine de Saint-Exupéry",
+    "quantity": 8,
+    "price": 25.50,
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/LPP_couv.jpg/330px-LPP_couv.jpg"
+  },
+  {
+    "id": 3,
+    "name": "1984",
+    "author": "George Orwell",
+    "quantity": 15,
+    "price": 39.90,
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/1984first.jpg/330px-1984first.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Capitães da Areia",
+    "author": "Jorge Amado",
+    "quantity": 6,
+    "price": 29.00,
+    "photo": "https://upload.wikimedia.org/wikipedia/pt/thumb/2/2d/Capitaesdaareia.jpg/250px-Capitaesdaareia.jpg"
+  },
+  {
+    "id": 5,
+    "name": "A Revolução dos Bichos",
+    "author": "George Orwell",
+    "quantity": 10,
+    "price": 28.75,
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Animal_Farm_-_1st_edition.jpg/330px-Animal_Farm_-_1st_edition.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Grande Sertão: Veredas",
+    "author": "João Guimarães Rosa",
+    "quantity": 5,
+    "price": 49.90,
+    "photo": "https://upload.wikimedia.org/wikipedia/pt/thumb/6/6f/Grandesertaoveredas.jpg/250px-Grandesertaoveredas.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Ensaio Sobre a Cegueira",
+    "author": "José Saramago",
+    "quantity": 7,
+    "price": 37.20,
+    "photo": "https://upload.wikimedia.org/wikipedia/pt/thumb/b/b3/Ensaio_sobre_a_cegueira.jpg/250px-Ensaio_sobre_a_cegueira.jpg"
+  }
+]
