@@ -31,11 +31,6 @@ body {
     padding: 5rem 0;
 }
 
-.box.cta {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-}
 
 .card-image > .fa {
     font-size: 8rem;
@@ -80,8 +75,14 @@ body {
         min-height: 250px;
     }
 }
- 
+
 .columns{
     display: flex;
     flex-wrap: wrap;
+}
+
+.box-cta > .column > .card {
+    display: flex;
+    flex-direction: column;
+    
 }

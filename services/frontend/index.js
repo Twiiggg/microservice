@@ -64,7 +64,6 @@ function calculateShipping(id, cep) {
 //Aguarda o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', function () {
     const books = document.querySelector('.books'); //Seleciona o container onde os livros serão exibidos
-
     //Busca os produtos (livros) do servidor
     fetch('http://localhost:3000/products')
         .then((data) => {
@@ -106,7 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function productSearch() {
     let id = document.getElementById('idsearch').value
-    fetch(`http://localhost/3000/product/${id}`)
+    let box = document.querySelector(".box-cta")
+    box.innerHTML = ""
+    fetch(`http://localhost:3000/product/${id}`)
         .then((data) => {
             if(data.ok){
                 return data.json()
@@ -114,12 +115,11 @@ function productSearch() {
             throw data.statusText
         })
         .then((data) => {
-            alert(data)
+            box.appendChild(newBook(data))
         })
         .catch((err) => {
             //Mostra erro se a requisição falhar
             swal('Erro', 'Erro ao pesquisar', 'error');
             console.error(err);
         });
-
 }
