@@ -30,6 +30,12 @@ server.addService(inventoryProto.InventoryService.service, {
             products: products, //retorna todos os produtos carregados do JSON
         });
     },
+    searchProductbyID: (payload, callback) => {
+        callback(
+            null,
+            products.find((products) => products.id == payload.request.id)
+        )
+    }
 });
 
 //inicia o servidor gRPC na porta 3002 e exibe uma mensagem de status no console

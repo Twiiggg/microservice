@@ -58,6 +58,20 @@ app.get('/shipping/:cep', (req, res, next) => {
     );
 });
 
+app.get('/product/:id'), (req, res, next) => {
+    // chama o microserevice
+    inventory.searchProductByID({ id: req.params.id }, (err, product) => {
+        // se der erro de comms, retorna ao browser
+        if (err) {
+            console.error(err);
+            res.status(500).send({ error: 'deu errado :cc'});
+        } else {
+            // se (sem erro) -> retorna o livro
+            res.json(product);
+        }
+    })
+}
+
 /**
  * Inicia o router (rotas)
  */
