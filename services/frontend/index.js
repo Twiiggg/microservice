@@ -19,11 +19,11 @@ function newBook(book) {
             <div class="card-content">
                 <div class="content book" data-id="${book.id}"> 
                     <div class="book-meta">
-                        <p class="is-size-4">R$${book.price.toFixed(2)}</p> 
-                        <p class="is-size-6">Disponível em estoque: 5</p> 
-                        <h4 class="is-size-3 title">${book.name}</h4> 
-                        <p class="subtitle">${book.author}</p> 
-                    </div>
+                    <h4 class="is-size-3 title">${book.name}</h4> 
+                    <p class="subtitle">${book.author}</p> 
+                    <p class="is-size-4">R$${book.price.toFixed(2)}</p> 
+                        <p class="is-size-6">Disponível em estoque: ${book.quantity}</p> 
+                        </div>
                     <div class="field has-addons"> 
                         <div class="control">
                             <input class="input" type="text" placeholder="Digite o CEP"/>
@@ -103,3 +103,23 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error(err);
         });
 });
+
+function productSearch() {
+    let id = document.getElementById('idsearch').value
+    fetch(`http://localhost/3000/product/${id}`)
+        .then((data) => {
+            if(data.ok){
+                return data.json()
+            }
+            throw data.statusText
+        })
+        .then((data) => {
+            alert(data)
+        })
+        .catch((err) => {
+            //Mostra erro se a requisição falhar
+            swal('Erro', 'Erro ao pesquisar', 'error');
+            console.error(err);
+        });
+
+}

@@ -58,9 +58,9 @@ app.get('/shipping/:cep', (req, res, next) => {
     );
 });
 
-app.get('/product/:id'), (req, res, next) => {
+app.get('/product/:id', (req, res, next) => {
     // chama o microserevice
-    inventory.searchProductByID({ id: req.params.id }, (err, product) => {
+    inventory.SearchProductByID({ id: req.params.id }, (err, product) => {
         // se der erro de comms, retorna ao browser
         if (err) {
             console.error(err);
@@ -69,8 +69,8 @@ app.get('/product/:id'), (req, res, next) => {
             // se (sem erro) -> retorna o livro
             res.json(product);
         }
-    })
-}
+    });
+});
 
 /**
  * Inicia o router (rotas)

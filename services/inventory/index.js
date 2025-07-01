@@ -30,10 +30,10 @@ server.addService(inventoryProto.InventoryService.service, {
             products: products, //retorna todos os produtos carregados do JSON
         });
     },
-    searchProductbyID: (payload, callback) => {
+    SearchProductByID: (payload, callback) => {
         callback(
             null,
-            products.find((products) => products.id == payload.request.id)
+            products.find((product) => product.id == payload.request.id)
         )
     }
 });
